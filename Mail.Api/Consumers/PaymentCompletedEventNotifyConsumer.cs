@@ -7,7 +7,7 @@ public class PaymentCompletedEventNotifyConsumer : IConsumer<PaymentCompletedEve
 {
     public Task Consume(ConsumeContext<PaymentCompletedEvent> context)
     {
-        Console.WriteLine($"{DateTime.Now}:{context.Message.OrderId} -  Başrılı ödeme maili müşteriye gönderilmiştir.");
+        Console.WriteLine($"{DateTime.Now}:{context.Message.OrderId} -  Başarılı ödeme maili müşteriye gönderilmiştir.");
 
         return Task.CompletedTask;
     }
