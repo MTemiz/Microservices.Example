@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  order.api:
+    build:
+      context: "/Users/mesut/github/Microservices.Example"
+      dockerfile: "Order.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Order.Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "order.api:dev"
+    ports: []
+    volumes:
+    - "/Users/mesut/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/mesut/github/Microservices.Example/Order.Api:/app:rw"
+    - "/Users/mesut/github/Microservices.Example:/src:rw"
+    working_dir: "/app"
